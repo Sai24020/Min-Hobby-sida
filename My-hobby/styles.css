@@ -1,0 +1,174 @@
+/* makes sizing simpler */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+  /*font: inherit;*/
+  font: Montserrat;
+}
+
+/* dark mode user-agent-styles */
+
+html {
+  color-scheme: dark light;
+}
+
+/* min body height */
+
+body {
+  min-height: 100vh;
+  text-align: center;
+
+}
+
+body {
+    font-family: `Montserrat`, sans-serif;
+    margin: 0;
+    padding: 0;
+    /*background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);*/
+    background: linear-gradient(black, red, white, green);
+
+    line-height: 150%;
+   
+}
+
+/* responsive images/videos */
+img,
+picture,
+svg,
+video,
+figure {
+  display: block;
+  max-width: 100%;
+  text-align: center;
+ margin-inline: auto;
+}
+
+
+p {
+    color: rgb(76, 9, 9);
+    font-weight: bold; 
+    font-size: 1rem;
+}
+
+figcaption {
+    color: rgb(76, 9, 9);
+    font-weight: bold; 
+    font-size: 1rem;
+
+}
+
+header {
+    font-family: ´Montserrat`, sans-serif;
+    border: 2px solid red;
+    padding: 20px;
+    
+}
+h1 {
+    font-family: `Montserrat`, sans-serif;
+    color: white;
+    line-height: 2.5rem;
+    font-size: 4rem;
+}
+h2,
+h3 {
+    font-family: `Montserrat`, sans-serif;
+    color: darkblue;
+    line-height: 2.5rem;
+    font-size: 2rem;
+}
+
+main {
+    border: 2px solid blue;
+    text-align: center;
+    
+}
+nav {
+    text-align: center;
+    padding: 20px 0;
+}
+a:visited {
+    color: red;
+}
+.flyg-menu {
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.flyg-menu li:nth-child(1) {
+    background-color: rgb(185, 90, 28);
+}
+.flyg-menu li:nth-child(2) {
+    background-color: rgb(24, 151, 41);
+}
+.flyg-menu li:nth-child(3) {
+    background-color: rgb(47, 13, 105);
+}
+.flyg-menu li:nth-child(4) {
+    background-color: rgb(162, 35, 105);
+}
+.flyg-menu li:nth-child(5) {
+    background-color: rgb(26, 125, 125);
+}
+.flyg-menu li:nth-child(6) {
+    background-color: aqua;
+}
+
+.flyg-menu li a {
+    text-decoration: none;
+    color: #050147;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 20px;
+    display: block;
+    text-align: center;
+  }
+  
+  input:focus {
+    background-color: #afc0c4;
+    outline: 2px solid green;
+    outline-offset: 9px;
+  }
+  input[type='text'] {
+    color: rgb(34, 22, 210);
+  }
+  
+  .flyg-menu li a:focus {
+    outline: 3px solid lightblue;
+    outline-offset: 2px;
+  }
+.kontakt-text p, 
+.kontakt-text li a {
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black; 
+    text-align: start;
+}
+
+footer {
+    list-style: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+footer a {
+    
+    color: #471801;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 20px;
+
+  }
+  footer a:focus {
+    outline: 3px solid lightseagreen;
+    outline-offset: 2px;
+  }

@@ -12,43 +12,83 @@
   margin: 0;
   padding: 0;
   /*font: inherit;*/
-  font: Montserrat;
 }
 
 /* dark mode user-agent-styles */
 
 html {
-  color-scheme: dark light;
+  color-scheme: dark dark;
 }
 
 /* min body height */
 
-body {
+/*body {
   min-height: 100vh;
   text-align: center;
 
-}
+}*/
 
-body {
-    font-family: `Montserrat`, sans-serif;
+@font-face {
+    font-family: "MyHelvetica";
+    src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+      url("MgOpenModernaBold.ttf");
+    font-weight: bold;
+  }
+
+:root {
+    --primary-color: #79768c;
+    /* --primary-color: #e74c3c; */
+    --secondary-color: #2ecc71;
+    /*--font-size-base: 24xp;*/
+    --font-size-base: 2.5rem;
+    --font-family-footer: "MyHelvetica";
+    --font-family-body: "Roboto", sans-serif;
+    --font-family-heading: "Rubik Dirt", system-ui;
+    
+  }
+
+  @font-face {
+    font-family: "Bitstream Vera Serif Bold";
+    src: url("https://mdn.github.io/shared-assets/fonts/VeraSeBd.ttf");
+  }
+
+  body {
+   /* font-family: var(--font-family-body);*/
+    font-size: var(--font-size-base);
+    /*font-size: 30px;
+    */
+    color: var(--primary-color);
+   
+    /* ta bort padding: 20px;*/
+    padding: 0;
+    background: linear-gradient(black, red, white, green);
+    line-height: 150%;
+    text-align: center;
+     min-height: 100vh;
+     margin: 0;
+   
+     font-family: "Bitstream Vera Serif Bold", serif;
+   
+      
+
+  }
+
+/*body {
+    font-family: `montserrat`, sans-serif;
     margin: 0;
     padding: 0;
-    /*background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);*/
-    background: linear-gradient(black, red, white, green);
+    /*background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);*/  
 
-    line-height: 150%;
-   
-}
-
-/* responsive images/videos */
+/* responsive images/videos/table */
 img,
 picture,
 svg,
 video,
-figure {
+figure,
+table {
   display: block;
   max-width: 100%;
-  text-align: center;
+  /*text-align: center;*/
  margin-inline: auto;
 }
 
@@ -66,42 +106,50 @@ figcaption {
 
 }
 
-header {
-    font-family: ´Montserrat`, sans-serif;
+
+h2,
+h3 {
+    font-family: var(--font-family-heading);
     border: 2px solid red;
     padding: 20px;
-    
 }
+
 h1 {
-    font-family: `Montserrat`, sans-serif;
-    color: white;
+    font-family: var(--font-family-heading);
+    color: var(--primary-color);
     line-height: 2.5rem;
-    font-size: 4rem;
+   /* font-size: 4rem;*/
 }
 h2,
 h3 {
-    font-family: `Montserrat`, sans-serif;
-    color: darkblue;
-    line-height: 2.5rem;
-    font-size: 2rem;
+    font-family: var(--secondary-color);
+   /* color: darkblue;*/
+    line-height: 3.5rem;
+   /* font-size: 2rem;*/
 }
 
 main {
     border: 2px solid blue;
-    text-align: center;
+   /* text-align: center;*/
     
 }
 nav {
-    text-align: center;
+   /* text-align: center;*/
     padding: 20px 0;
+   /*Bast place i cener den 2 under*/
+    width: 50%;
+    margin-inline: auto;
 }
 a:visited {
-    color: red;
+    color: blue;
 }
 .flyg-menu {
+   
     list-style: none;
     padding: 10px 20px;
     border-radius: 5px;
+    font-family: var(--font-family-heading);
+    /*font-family: "Roboto", sans-serif;*/
 }
 .flyg-menu li:nth-child(1) {
     background-color: rgb(185, 90, 28);
@@ -129,35 +177,39 @@ a:visited {
     font-size: 2rem;
     padding: 20px;
     display: block;
-    text-align: center;
+   /* text-align: center;*/
   }
   
   input:focus {
     background-color: #afc0c4;
     outline: 2px solid green;
-    outline-offset: 9px;
+    outline-offset: 6rem;
   }
   input[type='text'] {
     color: rgb(34, 22, 210);
   }
   
-  .flyg-menu li a:focus {
+  .flyg-menu li a:focus,
+  .kontakt-text li a:focus,
+  footer {
     outline: 3px solid lightblue;
     outline-offset: 2px;
   }
 .kontakt-text p, 
-.kontakt-text li a {
+.kontakt-text li {
     list-style: none;
     padding: 10px 20px;
     border-radius: 5px;
-    color: black; 
+   /* color: black; */
     text-align: start;
+    font-family: var(--font-family-footer);
 }
 
 footer {
     list-style: none;
     padding: 10px 20px;
     border-radius: 5px;
+    font-family: var(--font-family-footer);
 }
 
 footer a {
@@ -168,7 +220,21 @@ footer a {
     padding: 20px;
 
   }
-  footer a:focus {
+  footer a:focus,
+  .kontakt p, h2 {
     outline: 3px solid lightseagreen;
     outline-offset: 2px;
+    background-color: antiquewhite;
+  }
+
+article  h3 {
+    outline: 5px solid lightseagreen;
+    outline-offset: 2px;
+    background-color: rgb(121, 74, 12);
+  }
+
+  table {
+    width: 50%;
+    text-align: center;
+    
   }

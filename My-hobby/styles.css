@@ -41,8 +41,8 @@ html {
     --secondary-color: #2ecc71;
     /*--font-size-base: 24xp;*/
     --font-size-base: 2.5rem;
-    --font-family-footer: "MyHelvetica";
-    --font-family-body: "Roboto", sans-serif;
+    --font-family-footer: "Roboto", sans-serif;
+    --font-family-body: "MyHelvetica", serif;
     --font-family-heading: "Rubik Dirt", system-ui;
     
   }
@@ -106,20 +106,29 @@ figcaption {
 
 }
 
+header {
+    font-family: var(--font-family-footer);
+    border: 2px solid red;
+    padding: 3rem;
+
+
+}
 
 h2,
 h3 {
     font-family: var(--font-family-heading);
     border: 2px solid red;
-    padding: 20px;
+    padding: 30px;
 }
 
 h1 {
-    font-family: var(--font-family-heading);
+    font-family: var(--font-family-footer);
     color: var(--primary-color);
     line-height: 2.5rem;
    /* font-size: 4rem;*/
+   margin-top: 1rem;
 }
+
 h2,
 h3 {
     font-family: var(--secondary-color);
@@ -227,7 +236,7 @@ footer a {
     background-color: antiquewhite;
   }
 
-article  h3 {
+article  h2, h3 {
     outline: 5px solid lightseagreen;
     outline-offset: 2px;
     background-color: rgb(121, 74, 12);
